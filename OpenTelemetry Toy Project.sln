@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTelemetry Toy Project", "OpenTelemetry Toy Project\OpenTelemetry Toy Project.csproj", "{FACA0CB0-97E4-406E-9746-8EAB1C4002B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FACA0CB0-97E4-406E-9746-8EAB1C4002B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FACA0CB0-97E4-406E-9746-8EAB1C4002B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FACA0CB0-97E4-406E-9746-8EAB1C4002B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FACA0CB0-97E4-406E-9746-8EAB1C4002B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
