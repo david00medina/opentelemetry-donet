@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
-using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -88,12 +85,12 @@ internal sealed record TelemetryIntegrationLogValues(
     {
         var lookup = AttributeLookup.From(record.Attributes, record.StateValues);
         var attributesJson = AttributeLookup.Serialize(record.Attributes, record.StateValues);
-
+        
         return new TelemetryIntegrationLogValues(
             TraceId: record.TraceId != default ? record.TraceId.ToString() : null,
             SpanId: record.SpanId != default ? record.SpanId.ToString() : null,
-            SeverityText: record.SeverityText,
-            SeverityNumber: record.Severity.HasValue ? (int)record.Severity.Value : null,
+            SeverityText: record.LogLevel.ToString(),
+            SeverityNumber: (int)record.LogLevel,
             Body: record.FormattedMessage ?? record.Body?.ToString(),
             AttributesJson: attributesJson,
             EventName: record.EventId.Name,
@@ -220,31 +217,31 @@ internal static class TelemetryExportClient
 
     public static void SendLog(TelemetryIntegrationLogValues values)
     {
-        PostJson("api/integration/logs", values.ToRequest());
+        PostJson("api/integrations/logs", values.ToRequest());
     }
 
     public static void SendTraceLifecycleRequests(TelemetryIntegrationSpanValues values)
     {
         if (string.IsNullOrEmpty(values.ParentSpanId))
         {
-            PostJson("api/integration/trace", values.ToNewTraceRequest());
+            PostJson("api/integrations/trace", values.ToNewTraceRequest());
         }
         else
         {
-            PutJson("api/integration/trace", values.ToExistingTraceRequest());
+            PutJson("api/integrations/trace", values.ToExistingTraceRequest());
         }
     }
 
     public static void NotifySpanCompletion(TelemetryIntegrationSpanValues values)
     {
-        PostJson("api/integration/span/completed", values.ToCompletionRequest());
+        PostJson("api/integrations/span/completed", values.ToCompletionRequest());
     }
 
     private static HttpClient CreateHttpClient()
     {
         var client = new HttpClient
         {
-            BaseAddress = new Uri("https://nifi-comon.com/"),
+            BaseAddress = new Uri("https://bc095d3c-1aa5-4014-9e32-604ff38e3ce0.mock.pstmn.io/"),
             Timeout = TimeSpan.FromSeconds(10),
         };
 
@@ -504,7 +501,7 @@ internal sealed class AttributeLookup
         return value switch
         {
             string s => s,
-            IFormattable formattable => formattable.ToString(null, System.Globalization.CultureInfo.InvariantCulture),
+            IFormattable formattable => formattable.ToString(null, CultureInfo.InvariantCulture),
             _ => value.ToString()
         };
     }

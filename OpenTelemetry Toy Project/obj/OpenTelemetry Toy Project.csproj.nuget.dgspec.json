@@ -8,7 +8,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\Sharvik\\Documents\\Projects\\AppxiteProjects\\OpenTelemetry Toy Project\\OpenTelemetry Toy Project\\OpenTelemetry Toy Project\\OpenTelemetry Toy Project.csproj",
-        "projectName": "OpenTelemetry Toy Project",
+        "projectName": "OpenTelemetry.Toy.Library",
         "projectPath": "C:\\Users\\Sharvik\\Documents\\Projects\\AppxiteProjects\\OpenTelemetry Toy Project\\OpenTelemetry Toy Project\\OpenTelemetry Toy Project\\OpenTelemetry Toy Project.csproj",
         "packagesPath": "C:\\Users\\Sharvik\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Sharvik\\Documents\\Projects\\AppxiteProjects\\OpenTelemetry Toy Project\\OpenTelemetry Toy Project\\OpenTelemetry Toy Project\\obj\\",

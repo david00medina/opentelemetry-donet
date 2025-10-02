@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using OpenTelemetry_Toy_Project;
 using OpenTelemetry;
 using OpenTelemetry.Logs;
 using OpenTelemetry.Metrics;
@@ -11,6 +13,9 @@ var serviceName = "dice-server";
 var serviceVersion = "1.0.0";
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Configuration
+    .AddJsonFile("local.settings.json", optional: true, reloadOnChange: true);
 
 builder.Services.AddOpenTelemetry()
     .ConfigureResource(resource => resource.AddService(

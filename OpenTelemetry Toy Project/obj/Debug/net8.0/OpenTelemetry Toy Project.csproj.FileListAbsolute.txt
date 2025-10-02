@@ -1,17 +1,8 @@
-C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\bin\Debug\net8.0\OpenTelemetry Toy Project.exe
-C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\bin\Debug\net8.0\OpenTelemetry Toy Project.deps.json
-C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\bin\Debug\net8.0\OpenTelemetry Toy Project.runtimeconfig.json
-C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\bin\Debug\net8.0\OpenTelemetry Toy Project.dll
-C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\bin\Debug\net8.0\OpenTelemetry Toy Project.pdb
 C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\obj\Debug\net8.0\OpenTelemetry Toy Project.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\obj\Debug\net8.0\OpenTelemetry Toy Project.AssemblyInfoInputs.cache
 C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\obj\Debug\net8.0\OpenTelemetry Toy Project.AssemblyInfo.cs
 C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\obj\Debug\net8.0\OpenTelemetry Toy Project.csproj.CoreCompileInputs.cache
-C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\obj\Debug\net8.0\OpenTelemetry Toy Project.dll
-C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\obj\Debug\net8.0\refint\OpenTelemetry Toy Project.dll
-C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\obj\Debug\net8.0\OpenTelemetry Toy Project.pdb
 C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\obj\Debug\net8.0\OpenTelemetry Toy Project.genruntimeconfig.cache
-C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\obj\Debug\net8.0\ref\OpenTelemetry Toy Project.dll
 C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\obj\Debug\net8.0\OpenTelemetry Toy Project.csproj.AssemblyReference.cache
 C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
 C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
@@ -35,3 +26,13 @@ C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\Op
 C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\bin\Debug\net8.0\OpenTelemetry.Exporter.Console.dll
 C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\bin\Debug\net8.0\OpenTelemetry.Extensions.Hosting.dll
 C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\bin\Debug\net8.0\OpenTelemetry.Instrumentation.AspNetCore.dll
+C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\bin\Debug\net8.0\OpenTelemetry.Toy.Library.exe
+C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\bin\Debug\net8.0\OpenTelemetry.Toy.Library.deps.json
+C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\bin\Debug\net8.0\OpenTelemetry.Toy.Library.runtimeconfig.json
+C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\bin\Debug\net8.0\OpenTelemetry.Toy.Library.dll
+C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\bin\Debug\net8.0\OpenTelemetry.Toy.Library.pdb
+C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\obj\Debug\net8.0\OpenTelemetry Toy Project.sourcelink.json
+C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\obj\Debug\net8.0\OpenTelemetry.Toy.Library.dll
+C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\obj\Debug\net8.0\refint\OpenTelemetry.Toy.Library.dll
+C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\obj\Debug\net8.0\OpenTelemetry.Toy.Library.pdb
+C:\Users\Sharvik\Documents\Projects\AppxiteProjects\OpenTelemetry Toy Project\OpenTelemetry Toy Project\OpenTelemetry Toy Project\obj\Debug\net8.0\ref\OpenTelemetry.Toy.Library.dll
