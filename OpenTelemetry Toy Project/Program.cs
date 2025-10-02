@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using OpenTelemetry_Toy_Project;
+using OpenTelemetry;
 using OpenTelemetry.Logs;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
@@ -11,21 +14,30 @@ var serviceVersion = "1.0.0";
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Configuration
+    .AddJsonFile("local.settings.json", optional: true, reloadOnChange: true);
+
 builder.Services.AddOpenTelemetry()
     .ConfigureResource(resource => resource.AddService(
         serviceName: serviceName,
-        serviceVersion: serviceVersion)).WithTracing(tracing => tracing
+        serviceVersion: serviceVersion))
+    .WithTracing(tracing => tracing
         .AddSource(serviceName)
         .AddAspNetCoreInstrumentation()
-        .AddConsoleExporter()).WithMetrics(metrics => metrics
+        .AddProcessor(new SimpleActivityExportProcessor(new IntegrationSpanExporter()))
+        .AddConsoleExporter())
+    .WithMetrics(metrics => metrics
         .AddMeter(serviceName)
         .AddConsoleExporter());
 
-builder.Logging.AddOpenTelemetry(options => options
-    .SetResourceBuilder(ResourceBuilder.CreateDefault().AddService(
+builder.Logging.AddOpenTelemetry(options =>
+{
+    options.SetResourceBuilder(ResourceBuilder.CreateDefault().AddService(
         serviceName: serviceName,
-        serviceVersion: serviceVersion))
-    .AddConsoleExporter());
+        serviceVersion: serviceVersion));
+    options.AddProcessor(new SimpleLogRecordExportProcessor(new IntegrationLogExporter()));
+    options.AddConsoleExporter();
+});
 
 builder.Services.AddControllers();
 
