@@ -1,12 +1,16 @@
-﻿using System.Net;
+using System.Collections.Generic;
+using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using OpenTelemetry_Toy_Project.Features.Dice.Models;
 
-namespace OpenTelemetry_Toy_Project;
+namespace OpenTelemetry_Toy_Project.Features.Dice.Controllers;
 
-public class DiceController: IDiceController
+[ApiController]
+[Route("[controller]")]
+public class DiceController : ControllerBase, IDiceController
 {
-    private ILogger<DiceController> _logger;
+    private readonly ILogger<DiceController> _logger;
 
     public DiceController(ILogger<DiceController> logger)
     {
@@ -21,7 +25,7 @@ public class DiceController: IDiceController
             _logger.LogError("Missing rolls parameter");
             throw new HttpRequestException("Missing rolls parameter", null, HttpStatusCode.BadRequest);
         }
-        
+
         var result = new Dice(1, 6).RollTheDice(rolls.Value);
 
         if (string.IsNullOrEmpty(player))
@@ -32,7 +36,7 @@ public class DiceController: IDiceController
         {
             _logger.LogInformation("{player} is rolling the dice: {result}", player, result);
         }
-        
+
         return result;
     }
 }

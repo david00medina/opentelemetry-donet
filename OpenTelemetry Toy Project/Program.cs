@@ -1,13 +1,14 @@
-﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using OpenTelemetry_Toy_Project;
 using OpenTelemetry;
 using OpenTelemetry.Logs;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
+using OpenTelemetry_Toy_Project.Features.Dice.Controllers;
+using OpenTelemetry_Toy_Project.Telemetry.Exporting;
 
 var serviceName = "dice-server";
 var serviceVersion = "1.0.0";
@@ -32,15 +33,15 @@ builder.Services.AddOpenTelemetry()
 
 builder.Logging.ClearProviders()
     .AddOpenTelemetry(options =>
-{
-    options.SetResourceBuilder(ResourceBuilder.CreateDefault().AddService(
-        serviceName: serviceName,
-        serviceVersion: serviceVersion)).IncludeScopes = true;
-    options.AddProcessor(new SimpleLogRecordExportProcessor(new IntegrationLogExporter()));
-    options.AddConsoleExporter();
-});
+    {
+        options.SetResourceBuilder(ResourceBuilder.CreateDefault().AddService(
+            serviceName: serviceName,
+            serviceVersion: serviceVersion)).IncludeScopes = true;
+        options.AddProcessor(new SimpleLogRecordExportProcessor(new IntegrationLogExporter()));
+        options.AddConsoleExporter();
+    });
 
-builder.Services.AddScoped<IDiceController,DiceController>();
+builder.Services.AddScoped<IDiceController, DiceController>();
 
 builder.Services.AddControllers();
 
