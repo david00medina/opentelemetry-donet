@@ -26,7 +26,7 @@ public class DiceController : ControllerBase, IDiceController
             throw new HttpRequestException("Missing rolls parameter", null, HttpStatusCode.BadRequest);
         }
 
-        var result = new Dice(1, 6).RollTheDice(rolls.Value);
+        var result = new Models.Dice(1, 6).RollTheDice(rolls.Value);
 
         if (string.IsNullOrEmpty(player))
         {
