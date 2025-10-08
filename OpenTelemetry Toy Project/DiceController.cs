@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging;
 
 namespace OpenTelemetry_Toy_Project;
 
-public class DiceController: ControllerBase
+public class DiceController: IDiceController
 {
     private ILogger<DiceController> _logger;
 

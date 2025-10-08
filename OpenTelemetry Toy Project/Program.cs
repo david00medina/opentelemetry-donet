@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -30,14 +30,17 @@ builder.Services.AddOpenTelemetry()
         .AddMeter(serviceName)
         .AddConsoleExporter());
 
-builder.Logging.AddOpenTelemetry(options =>
+builder.Logging.ClearProviders()
+    .AddOpenTelemetry(options =>
 {
     options.SetResourceBuilder(ResourceBuilder.CreateDefault().AddService(
         serviceName: serviceName,
-        serviceVersion: serviceVersion));
+        serviceVersion: serviceVersion)).IncludeScopes = true;
     options.AddProcessor(new SimpleLogRecordExportProcessor(new IntegrationLogExporter()));
     options.AddConsoleExporter();
 });
+
+builder.Services.AddScoped<IDiceController,DiceController>();
 
 builder.Services.AddControllers();
 
